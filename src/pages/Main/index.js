@@ -4,7 +4,9 @@ import { Link } from 'react-router-dom';
 
 import api from '../../services/api';
 
-import { Conteiner, Form, SubmitButton, List } from './styles';
+import Container from '../../components/Container';
+
+import { Form, SubmitButton, List } from './styles';
 
 export default class Main extends Component {
   state = {
@@ -57,7 +59,7 @@ export default class Main extends Component {
     const { repositories, newRepo, loading } = this.state;
 
     return (
-      <Conteiner>
+      <Container>
         <h1>
           <FaGitAlt />
           Repositórios
@@ -89,7 +91,7 @@ export default class Main extends Component {
             </li>
           ))}
         </List>
-      </Conteiner>
+      </Container>
     );
   }
 }
